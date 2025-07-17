@@ -55,7 +55,7 @@ body {
   flex-grow: 1;
   max-width: 900px;
   width: 100%;
-/*   margin: 2rem auto; */
+  margin: 1rem auto;
   background-color: #ffffff;
   color: #1f2937;
   padding: 2rem;
@@ -66,7 +66,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: calc(100vh - 200px); /* Agar tidak menggantung di bawah */
+/*   min-height: calc(100vh - 200px); /* Agar tidak menggantung di bawah */ */
 }
 
 /* Judul */
