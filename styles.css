@@ -10,6 +10,12 @@ html, body {
   min-height: 100vh;
   overflow-x: hidden; /* hindari scroll horizontal */
 }
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem; /* Tambahkan margin di body */
+  box-sizing: border-box; /* Agar padding/margin dihitung dalam ukuran */
+}
 
 /* Navigasi Tab */
 .nav-tabs {
