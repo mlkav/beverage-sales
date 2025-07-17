@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Beverage Sales Notebooks</title>
+
+  <!-- Favicon -->
   <link href="https://cdn.jsdelivr.net/gh/mlkav/mlkav/assets/favicon.png" rel="icon">
 
   <!-- Bootstrap -->
@@ -28,13 +30,18 @@
     </button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="clustering-tab" data-bs-toggle="tab" data-bs-target="#clustering" type="button" role="tab">
+    <button class="nav-link" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">
       Notebook Clustering
     </button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="classification-tab" data-bs-toggle="tab" data-bs-target="#classification" type="button" role="tab">
+    <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">
       Notebook Classification
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab">
+      Inference
     </button>
   </li>
 </ul>
@@ -49,14 +56,26 @@
   </div>
 
   <!-- Tab 1 -->
-  <div class="tab-pane fade" id="clustering" role="tabpanel">
+  <div class="tab-pane fade" id="tab1" role="tabpanel">
     <iframe src="https://beverage-sales.pages.dev/notebook-clust"></iframe>
   </div>
 
   <!-- Tab 2 -->
-  <div class="tab-pane fade" id="classification" role="tabpanel">
+  <div class="tab-pane fade" id="tab2" role="tabpanel">
     <iframe src="https://beverage-sales.pages.dev/notebook-class"></iframe>
   </div>
+
+  <!-- Tab 3 -->
+  <div class="tab-pane fade" id="tab3" role="tabpanel">
+    <div class="card m-4">
+      <div class="card-body text-center">
+        <h5 class="card-title">Konten Inference Tidak Tersedia</h5>
+        <p class="card-text">Proyek ini tidak mencakup proses inference sebagai bagian dari implementasinya.</p>
+        <p class="card-text">:)</p>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- Script -->
