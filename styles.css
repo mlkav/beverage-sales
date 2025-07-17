@@ -6,7 +6,7 @@ html, body {
   background-color: #f9fafb;
   color: #1f2937;
   min-height: 100vh;
-  overflow-x: hidden; /* Hindari scroll horizontal */
+  overflow-x: hidden;
 }
 
 body {
@@ -44,22 +44,17 @@ body {
 
 /* Tab Content */
 .tab-content {
-  flex: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   margin-top: 1rem;
-  overflow: hidden; /* Hindari nested scroll */
-}
-
-/* Iframe */
-iframe {
-  width: 100%;
-  height: 80vh; /* Gantilah 100% dengan unit tetap agar tidak menyebabkan scroll */
-  border: none;
-  box-sizing: border-box;
 }
 
 /* Markdown Container */
 .markdown-body {
+  flex-grow: 1;
   max-width: 900px;
+  width: 100%;
   margin: 2rem auto;
   background-color: #ffffff;
   color: #1f2937;
@@ -68,6 +63,10 @@ iframe {
   box-shadow: 0 8px 24px rgba(0,0,0,0.05);
   animation: fadeIn 0.5s ease;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 200px); /* Agar tidak menggantung di bawah */
 }
 
 /* Judul */
@@ -77,6 +76,14 @@ iframe {
   line-height: 1.3;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+}
+
+/* Iframe */
+iframe {
+  width: 100%;
+  height: 80vh; /* Hindari 100% agar tidak menyebabkan overflow */
+  border: none;
+  box-sizing: border-box;
 }
 
 /* Loading Text */
@@ -113,6 +120,7 @@ iframe {
   .markdown-body {
     padding: 1rem;
     margin: 1rem;
+    min-height: auto;
   }
 
   iframe {
