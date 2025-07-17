@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 1rem;
+/*   padding: 1rem; */
 }
 
 /* Navigasi Tab */
