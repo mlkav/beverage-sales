@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/Dicoding_Profile-blue?logo=browser" alt="Dicoding Profile">
 </a>
 
----
+
 
 # Beverage Sales (Clustering & Classification)
 
@@ -30,7 +30,7 @@ Proyek ini bertujuan untuk menerapkan teknik *unsupervised learning* dan *superv
 3. **Clustering**: Menerapkan K-Means dan menentukan jumlah cluster optimal dengan **Elbow Method** dan **Silhouette Score**.
 4. **Interpretasi**: Analisis karakteristik dari masing-masing cluster setelah dilakukan *inverse transform* ke data asli.
 
----
+
 
 ## Classification
 
