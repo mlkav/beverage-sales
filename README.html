@@ -1,4 +1,4 @@
-<!-- Informasi Proyek -->
+<!-- <!-- Informasi Proyek -->
 <div style="margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
   <img src="https://img.shields.io/badge/created-12/04/2025-blue" alt="Created">
   
@@ -82,3 +82,24 @@
   <li><strong>Recall</strong>: 100%</li>
   <li><strong>F1-Score</strong>: 100%</li>
 </ul>
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>README Viewer</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+
+  <script>
+    fetch('README.md')
+      .then(res => res.text())
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+      });
+  </script>
+</body>
+</html>
