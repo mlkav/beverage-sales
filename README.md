@@ -1,6 +1,6 @@
 ![created](https://img.shields.io/badge/created-12/04/2025-blue)
-[![Open Notebook](https://img.shields.io/badge/Open_Notebook_Clustering!-blue?logo=jupyter)](/beverage-sales/notebook-clust.html)
-[![Open Notebook](https://img.shields.io/badge/Open_Notebook_Classification!-blue?logo=jupyter)](/beverage-sales/notebook-class.html)
+[![Open Notebook](https://img.shields.io/badge/Open_Notebook_Clustering!-blue?logo=jupyter)](notebook-clust.html)
+[![Open Notebook](https://img.shields.io/badge/Open_Notebook_Classification!-blue?logo=jupyter)](notebook-class.html)
 <a href="https://www.linkedin.com/in/maulana-kavaldo/" target="_blank">
   <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin" alt="LinkedIn">
 </a>
