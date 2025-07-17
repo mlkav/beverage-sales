@@ -62,7 +62,7 @@ body {
   flex-grow: 1;
   max-width: 900px;
   width: 100%;
-  margin: auto;
+  margin:1rem auto;
   background-color: #ffffff;
   color: #1f2937;
   padding: 2rem;
