@@ -36,12 +36,6 @@
         document.getElementById('content').innerHTML = '<p style="color:red;">❌ Failed to load README.md</p>';
         console.error(err);
       });
-
-    function toggleTheme() {
-      document.body.classList.toggle("dark");
-      const btn = document.querySelector(".toggle-btn");
-      btn.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
-    }
   </script>
 </body>
 </html>
