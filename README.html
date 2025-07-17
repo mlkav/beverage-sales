@@ -2,99 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>README Viewer</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <!-- GitHub Markdown CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
 
-  <style>
-    :root {
-      --bg-color: #f9fafb;
-      --text-color: #1f2937;
-      --card-bg: #ffffff;
-    }
-
-    body.dark {
-      --bg-color: #0f172a;
-      --text-color: #e2e8f0;
-      --card-bg: #1e293b;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header {
-      padding: 1rem 2rem;
-      text-align: center;
-      background-color: var(--card-bg);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-
-    .toggle-btn {
-      float: right;
-      margin-top: -2.5rem;
-      margin-right: 2rem;
-      cursor: pointer;
-      background: none;
-      border: none;
-      font-size: 1rem;
-      color: var(--text-color);
-    }
-
-    .markdown-body {
-      max-width: 850px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-      transition: background-color 0.3s;
-      animation: fadeIn 0.5s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      .markdown-body {
-        padding: 1rem;
-        margin: 1rem;
-      }
-    }
-
-    .loading {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 1.1rem;
-      color: #888;
-    }
-  </style>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>📘 README Viewer</h1>
+  <div class="nav-tabs">
+    <a class="nav-link active">README</a>
     <button class="toggle-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
-  </header>
-
-  <div id="content" class="markdown-body">
-    <div class="loading">Loading README.md...</div>
   </div>
 
-  <!-- Markdown Parser -->
+  <div class="tab-content">
+    <article id="content" class="markdown-body">
+      <div class="loading">Loading README.md...</div>
+    </article>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-    // Markdown loader
     fetch('README.md')
       .then(res => {
         if (!res.ok) throw new Error("README not found");
@@ -104,11 +37,10 @@
         document.getElementById('content').innerHTML = marked.parse(md);
       })
       .catch(err => {
-        document.getElementById('content').innerHTML = `<p style="color:red;">❌ Failed to load README.md</p>`;
+        document.getElementById('content').innerHTML = '<p style="color:red;">❌ Failed to load README.md</p>';
         console.error(err);
       });
 
-    // Theme toggle
     function toggleTheme() {
       document.body.classList.toggle("dark");
       const btn = document.querySelector(".toggle-btn");
